@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TutorialRequirement
   - Enemy
+  - MovingPoint
   layers:
   - Default
   - TransparentFX

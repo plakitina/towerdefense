@@ -40,7 +40,7 @@ public class Manager : MonoBehaviour
     }
     void Spawn()
     {
-        if(enemiesPerSpawn > 0 && enemiesPerSpawn < totalEnemies)
+        if(enemiesPerSpawn > 0 && enemiesPerSpawn <= totalEnemies)
         {
             for(int i = 0; i < enemiesPerSpawn; i++)
             {
@@ -52,5 +52,15 @@ public class Manager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void removeEnemyFromScreen()
+    {
+        if(enemiesOnScreen > 0)
+        {
+            enemiesOnScreen -= 1;
+        }
+        Spawn();
+
     }
 }
