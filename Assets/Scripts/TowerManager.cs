@@ -28,6 +28,7 @@ public class TowerManager : MonoBehaviour
         {
             GameObject newTower = Instantiate(towerBtnPressed.TowerObject);
             newTower.transform.position = hit.transform.position;
+            Debug.Log("object created");
         }
     }
 
