@@ -26,19 +26,14 @@ public class Enemy : MonoBehaviour
                 if(target < wayPoints.Length)
                 {
                     enemy.position = Vector2.MoveTowards(enemy.position, wayPoints[target].position, navigationTime);
-                    navigationTime /=2 ;
+                    navigationTime = 0;
                 }
                 else
                 {
                     enemy.position = Vector2.MoveTowards(enemy.position, exit.position, navigationTime);
-                    navigationTime /=2;
+                    navigationTime = 0;
                 }
             }
-        }
-        else
-        {
-            enemy.position = Vector2.MoveTowards(enemy.position, exit.position, navigationTime);
-            navigationTime /= 2;
         }
     }
 

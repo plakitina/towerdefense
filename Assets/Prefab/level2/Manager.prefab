@@ -46,7 +46,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 4912432725350100317, guid: 91b92b07e1044284a9e1bd1201493f4e,
     type: 3}
   enemies:
-  - {fileID: 775437176867350368, guid: 80316f9dc8e47c54a8218873aeb046f3, type: 3}
+  - {fileID: 775437176867350368, guid: 075159a3b7dab324e807d63277748fca, type: 3}
   maxEnemiesOnScreen: 16
   totalEnemies: 30
   enemiesPerSpawn: 2
