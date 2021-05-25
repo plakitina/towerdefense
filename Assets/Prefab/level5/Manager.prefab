@@ -46,11 +46,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 2307925534588398529, guid: af80334b6dd833044bbf450ba7c95e81,
     type: 3}
   enemies:
-  - {fileID: 775437176867350368, guid: 075159a3b7dab324e807d63277748fca, type: 3}
-  - {fileID: 5762686765035987935, guid: 09498cb80716d434996128dcd1e35bfa, type: 3}
-  - {fileID: 5511174791155165553, guid: 63b099e9790477f4799bfbfb7dc68abf, type: 3}
-  - {fileID: 4114016684497258666, guid: 6664fea92691ad440af946b3788fe87a, type: 3}
-  - {fileID: 4608090529789323458, guid: 546be6146bffc6a4bada1580e3d10aea, type: 3}
+  - {fileID: 775437176867350368, guid: 7091792e9a86d1c47a14eed0cd1504dd, type: 3}
+  - {fileID: 5762686765035987935, guid: d0d85c5068c0a2a4485b6e5e9668aa96, type: 3}
+  - {fileID: 5511174791155165553, guid: 9b49b45d9d014484198869a76f4dbadb, type: 3}
+  - {fileID: 4114016684497258666, guid: 0e19e112b0106bc42adb286b99ef975b, type: 3}
+  - {fileID: 4608090529789323458, guid: c0227d4243733dd44aec1f55b0a8d037, type: 3}
   maxEnemiesOnScreen: 10
   totalEnemies: 10
   enemiesPerSpawn: 4
