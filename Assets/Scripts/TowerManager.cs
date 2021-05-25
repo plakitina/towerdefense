@@ -19,6 +19,7 @@ public class TowerManager : MonoBehaviour
         {
             Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);
+            PlaceTower(hit);
         }
     }
 
