@@ -26,12 +26,13 @@ public class Enemy : MonoBehaviour
                 if(target < wayPoints.Length)
                 {
                     enemy.position = Vector2.MoveTowards(enemy.position, wayPoints[target].position, navigationTime);
-                    navigationTime = 0;
+                    navigationTime /=2;
+                    Debug.Log(target);
                 }
                 else
                 {
                     enemy.position = Vector2.MoveTowards(enemy.position, exit.position, navigationTime);
-                    navigationTime = 0;
+                    navigationTime /= 2;
                 }
             }
         }
@@ -39,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "MovingPoint")
+        if (collision.tag == "MovingPoint")
         {
             target += 1;
         }

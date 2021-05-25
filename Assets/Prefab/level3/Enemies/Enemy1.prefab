@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 775437176867350370}
   - component: {fileID: 775437176867350372}
   - component: {fileID: -8722010781112738794}
-  - component: {fileID: 8398695944930838307}
   - component: {fileID: 7156994563905530073}
+  - component: {fileID: 8047831331185054777}
   m_Layer: 6
   m_Name: Enemy1
   m_TagString: Enemy
@@ -143,26 +143,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 3}
   m_EdgeRadius: 0
---- !u!114 &8398695944930838307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775437176867350368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91ce920595d5d145bca75d79287a5ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: 0
-  exit: {fileID: 1069447403691891243, guid: 00aff7caf1683034cbfd8aaac9961fc8, type: 3}
-  wayPoints:
-  - {fileID: 1309184286151716280, guid: 2afd094ea59aea745a47c32652a8c90c, type: 3}
-  - {fileID: 947525527393688887, guid: 789e501a9d59eeb48bf2f21e10fa6e1c, type: 3}
-  - {fileID: 3952831786685547836, guid: e520962deeefe124d8de847d070b3254, type: 3}
-  - {fileID: 7195764716220584449, guid: 8f990ca8f0f7c2f4b90e4705bc69e2e9, type: 3}
-  navigation: 0.01
 --- !u!50 &7156994563905530073
 Rigidbody2D:
   serializedVersion: 4
@@ -184,3 +164,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8047831331185054777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775437176867350368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d91ce920595d5d145bca75d79287a5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  exit: {fileID: 1069447403691891243, guid: 00aff7caf1683034cbfd8aaac9961fc8, type: 3}
+  wayPoints:
+  - {fileID: 7214682551924823626, guid: 2afd094ea59aea745a47c32652a8c90c, type: 3}
+  - {fileID: 3333841034572291657, guid: 789e501a9d59eeb48bf2f21e10fa6e1c, type: 3}
+  - {fileID: 2576660792965655202, guid: e520962deeefe124d8de847d070b3254, type: 3}
+  - {fileID: 2145904192156633399, guid: 8f990ca8f0f7c2f4b90e4705bc69e2e9, type: 3}
+  - {fileID: 194080543651659376, guid: 0e86dbe9a3916fd4889886004efe1ec5, type: 3}
+  - {fileID: 6344287008267469261, guid: a0b153ed608ec524983b1c9d98bc36e0, type: 3}
+  navigation: 0.001

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436262246929477812}
-  - component: {fileID: 1223507323853340136}
+  - component: {fileID: 341867564594729085}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1223507323853340136
+--- !u!114 &341867564594729085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,6 +51,6 @@ MonoBehaviour:
   - {fileID: 5511174791155165553, guid: 63b099e9790477f4799bfbfb7dc68abf, type: 3}
   - {fileID: 4114016684497258666, guid: 6664fea92691ad440af946b3788fe87a, type: 3}
   - {fileID: 4608090529789323458, guid: 546be6146bffc6a4bada1580e3d10aea, type: 3}
-  maxEnemiesOnScreen: 2
-  totalEnemies: 3
+  maxEnemiesOnScreen: 16
+  totalEnemies: 1
   enemiesPerSpawn: 1
