@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - MovingPoint
   - TowerSide
+  - Tower
+  - TowerSideFull
   layers:
   - Default
   - TransparentFX

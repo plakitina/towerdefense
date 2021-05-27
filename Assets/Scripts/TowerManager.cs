@@ -17,17 +17,23 @@ public class TowerManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);
+            Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition, Camera.MonoOrStereoscopicEye.Mono);
+            Vector3 adjustZ = new Vector3(mousePoint.x, mousePoint.y, towerBtnPressed.TowerObject.transform.position.z);
+
+            RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector3.zero);
+            if(hit.collider.tag == "TowerSide")
+            {
+                hit.collider.tag = "TowerSideFull";
+                PlaceTower(adjustZ, hit);
+            }
         }
     }
 
-    public void PlaceTower(RaycastHit2D hit)
+    public void PlaceTower(Vector3 adjustZ, RaycastHit2D hit)
     {
         if(!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)
         {
-            GameObject newTower = Instantiate(towerBtnPressed.TowerObject);
-            newTower.transform.position = hit.transform.position;
+            Instantiate(towerBtnPressed.TowerObject).transform.position = hit.transform.position;
             Debug.Log("object created");
         }
     }
