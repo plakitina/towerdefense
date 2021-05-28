@@ -186,3 +186,4 @@ MonoBehaviour:
   - {fileID: 194080543651659376, guid: 0e86dbe9a3916fd4889886004efe1ec5, type: 3}
   - {fileID: 6344287008267469261, guid: a0b153ed608ec524983b1c9d98bc36e0, type: 3}
   navigation: 0.001
+  rewardAmount: 50

@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
     public Transform exit;
     public Transform[] wayPoints;
     public float navigation;
+    int health;
+    [SerializeField]
+    int rewardAmount;
 
     Transform enemy;
     float navigationTime = 0;
@@ -13,6 +16,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Transform>();
+        Manager.instance.registerEnemy(this);
 
     }
 
@@ -27,7 +31,7 @@ public class Enemy : MonoBehaviour
                 {
                     enemy.position = Vector2.MoveTowards(enemy.position, wayPoints[target].position, navigationTime);
                     navigationTime /=2;
-                    Debug.Log(target);
+                    Debug.Log(wayPoints[target].position);
                 }
                 else
                 {
@@ -46,8 +50,7 @@ public class Enemy : MonoBehaviour
         }
         else if(collision.tag == "Finish")
         {
-            Manager.instance.removeEnemyFromScreen();
-            Destroy(gameObject);
+            Manager.instance.unregisterEnemy(this);
         }
     }
 }
