@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Transform>();
-        Manager.instance.registerEnemy(this);
+        Manager.Instance.registerEnemy(this);
 
     }
 
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
         }
         else if(collision.tag == "Finish")
         {
-            Manager.instance.unregisterEnemy(this);
+            Manager.Instance.unregisterEnemy(this);
         }
     }
 }

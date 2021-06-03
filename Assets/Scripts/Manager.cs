@@ -8,10 +8,8 @@ public enum gameStatus
     next,play,gameover,win
 }
 
-public class Manager : MonoBehaviour
+public class Manager : Loader<Manager>
 {
-    [SerializeField]
-    public static Manager instance = null;
     [SerializeField]
     public GameObject spawnPoint;
     [SerializeField]
@@ -42,6 +40,7 @@ public class Manager : MonoBehaviour
     int totalKill = 0;
     int whichEnemiesToSpawn = 0;
 
+    const float spawnDelay = 0.5f;
     public int TotalMoney
     {
         get{
@@ -56,32 +55,14 @@ public class Manager : MonoBehaviour
 
     public List<Enemy> EnemyList = new List<Enemy>(); 
 
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
-
-
     void Start()
     {
-        Spawn();
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void Spawn()
+
+    IEnumerator Spawn()
     {
         if(enemiesPerSpawn > 0 && EnemyList.Count <= totalEnemies)
         {
@@ -93,6 +74,8 @@ public class Manager : MonoBehaviour
                     newEnemy.transform.position = spawnPoint.transform.position;
                 }
             }
+            yield return new WaitForSeconds(spawnDelay);
+            StartCoroutine(Spawn());
         }
     }
 
