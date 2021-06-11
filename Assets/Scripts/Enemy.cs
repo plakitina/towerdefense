@@ -6,23 +6,38 @@ public class Enemy : MonoBehaviour
     public Transform exit;
     public Transform[] wayPoints;
     public float navigation;
-    int health;
     [SerializeField]
     int rewardAmount;
+    [SerializeField]
+    int health;
+
+    Collider2D enemyCollider;
+
 
     Transform enemy;
     float navigationTime = 0;
 
+    bool isDead = false;
+
+    public bool IsDead
+    {
+        get
+        {
+            return isDead;
+        }
+    }
+
+
     void Start()
     {
         enemy = GetComponent<Transform>();
+        enemyCollider = GetComponent<Collider2D>();
         Manager.Instance.registerEnemy(this);
-
     }
 
     void Update()
     {
-        if(wayPoints != null)
+        if(wayPoints != null && isDead == false)
         {
             navigationTime += Time.deltaTime;
             if(navigationTime > navigation)
@@ -31,7 +46,6 @@ public class Enemy : MonoBehaviour
                 {
                     enemy.position = Vector2.MoveTowards(enemy.position, wayPoints[target].position, navigationTime);
                     navigationTime /=2;
-                    Debug.Log(wayPoints[target].position);
                 }
                 else
                 {
@@ -40,6 +54,7 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,5 +67,29 @@ public class Enemy : MonoBehaviour
         {
             Manager.Instance.unregisterEnemy(this);
         }
+        else if(collision.tag == "Projectile")
+        {
+            Projectile newP = collision.gameObject.GetComponent<Projectile>();
+            EnemyHit(newP.AttackDamage);
+            Destroy(collision.gameObject);
+        }
+    }
+
+    public void EnemyHit(int hitPoints)
+    {
+        if (health - hitPoints > 0)
+        {
+            health -= hitPoints;
+        }
+        else
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        enemyCollider.enabled = false;
     }
 }

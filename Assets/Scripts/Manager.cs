@@ -41,6 +41,7 @@ public class Manager : Loader<Manager>
     int whichEnemiesToSpawn = 0;
 
     const float spawnDelay = 0.5f;
+    const float waveDelay = 5.0f;
     public int TotalMoney
     {
         get{
@@ -62,20 +63,32 @@ public class Manager : Loader<Manager>
 
     // Update is called once per frame
 
+
+    int tempEnemies = 0;
     IEnumerator Spawn()
     {
         if(enemiesPerSpawn > 0 && EnemyList.Count <= totalEnemies)
         {
-            for(int i = 0; i < enemiesPerSpawn; i++)
-            {
-                if (EnemyList.Count < maxEnemiesOnScreen)
+                if (tempEnemies == enemiesPerSpawn)
                 {
-                    GameObject newEnemy = Instantiate(enemies[0]) as GameObject;
-                    newEnemy.transform.position = spawnPoint.transform.position;
+                    enemiesPerSpawn += 2;
+                    yield return new WaitForSeconds(waveDelay);
+                    StartCoroutine(Spawn());
+
                 }
-            }
-            yield return new WaitForSeconds(spawnDelay);
-            StartCoroutine(Spawn());
+                else
+                {
+                    while (EnemyList.Count < enemiesPerSpawn - 1)
+                    {
+                        yield return new WaitForSeconds(spawnDelay);
+                        GameObject newEnemy = Instantiate(enemies[0]) as GameObject;
+                        tempEnemies++;
+                        newEnemy.transform.position = spawnPoint.transform.position;
+                        Debug.Log(EnemyList.Count);
+                    }
+                    StartCoroutine(Spawn());
+                }
+
         }
     }
 
