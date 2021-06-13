@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-public class TowerManager : MonoBehaviour
+public class TowerManager : Loader<TowerManager>
 {
     TowerBtn towerBtnPressed;
     // Start is called before the first frame update
@@ -17,24 +17,23 @@ public class TowerManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition, Camera.MonoOrStereoscopicEye.Mono);
-            Vector3 adjustZ = new Vector3(mousePoint.x, mousePoint.y, towerBtnPressed.TowerObject.transform.position.z);
+            Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector3.zero);
             if(hit.collider.tag == "TowerSide")
             {
                 hit.collider.tag = "TowerSideFull";
-                PlaceTower(adjustZ, hit);
+                PlaceTower(hit);
             }
         }
     }
 
-    public void PlaceTower(Vector3 adjustZ, RaycastHit2D hit)
+    public void PlaceTower(RaycastHit2D hit)
     {
         if(!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)
         {
-            Instantiate(towerBtnPressed.TowerObject).transform.position = hit.transform.position;
-            Debug.Log("object created");
+            GameObject newTower = Instantiate(towerBtnPressed.TowerObject);
+            newTower.transform.position = hit.transform.position;
         }
     }
 

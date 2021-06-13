@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 796117036804057727}
   - component: {fileID: 1757999821955118016}
   - component: {fileID: 9092781461778679163}
+  - component: {fileID: 5462427385953277311}
   m_Layer: 0
   m_Name: Fifth_Tower
   m_TagString: Tower
@@ -101,6 +102,20 @@ MonoBehaviour:
   AttackSpeed: 0.2
   isMultipleTarget: 1
   flyingEnemyTarget: 0
+--- !u!114 &5462427385953277311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586256413895548399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107f436c9b3556c48af266679d025a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 1
+  attackRadius: 2
 --- !u!1 &6072269622394840032
 GameObject:
   m_ObjectHideFlags: 0

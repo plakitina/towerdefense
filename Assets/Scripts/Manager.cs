@@ -103,7 +103,7 @@ public class Manager : Loader<Manager>
         Destroy(enemy.gameObject);
     }
 
-    public void destroyEnemies()
+    public void DestroyEnemies()
     {
         foreach (Enemy enemy in EnemyList)
         {

@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4847656625996064696}
   - component: {fileID: 4245903869300028438}
   - component: {fileID: 4148428124143300683}
+  - component: {fileID: 5196396073443644939}
   m_Layer: 0
   m_Name: First_Tower
   m_TagString: Tower
@@ -183,3 +184,19 @@ MonoBehaviour:
   AttackSpeed: 2
   isMultipleTarget: 0
   flyingEnemyTarget: 0
+--- !u!114 &5196396073443644939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169855233315504906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107f436c9b3556c48af266679d025a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 1
+  attackRadius: 3
+  projectile: {fileID: 1468828613681839888, guid: 50cb9474665e1ee4d945eed6426ade70,
+    type: 3}
