@@ -25,7 +25,7 @@ public class TowerControl : MonoBehaviour
     {
         attackCounter -= Time.deltaTime;
 
-        if(targetEnemy == null)
+        if(targetEnemy == null || targetEnemy.IsDead)
         {
             Enemy nearestEnemy = GetNearestEnemy();
             if(nearestEnemy != null && Vector2.Distance(transform.localPosition, nearestEnemy.transform.localPosition) <= attackRadius)
