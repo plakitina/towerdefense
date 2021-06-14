@@ -158,11 +158,15 @@ MonoBehaviour:
   target: 0
   exit: {fileID: 1069447403691891243, guid: 00aff7caf1683034cbfd8aaac9961fc8, type: 3}
   wayPoints:
-  - {fileID: 1309184286151716280, guid: 2afd094ea59aea745a47c32652a8c90c, type: 3}
-  - {fileID: 947525527393688887, guid: 789e501a9d59eeb48bf2f21e10fa6e1c, type: 3}
-  - {fileID: 3952831786685547836, guid: e520962deeefe124d8de847d070b3254, type: 3}
-  - {fileID: 7195764716220584449, guid: 8f990ca8f0f7c2f4b90e4705bc69e2e9, type: 3}
+  - {fileID: 1863931383913212847, guid: 3f6f03abf14a068479fdff01652bc763, type: 3}
+  - {fileID: 3553979693609093173, guid: a793497a7788c4b43b5d5c630822e40e, type: 3}
+  - {fileID: 2559392419231498787, guid: 89c69ed3c839f664a887c750ec41e670, type: 3}
+  - {fileID: 166088433898590113, guid: 654be99f8f6bb5042bf1fd328f539d11, type: 3}
+  - {fileID: 6468234744379414343, guid: 8ce6cc3cc7715fb4ebdd373321bc80c8, type: 3}
+  - {fileID: 6827754958919780139, guid: 8e810fe3002f4e74ebbedcdd80cea506, type: 3}
   navigation: 0.01
+  rewardAmount: 0
+  health: 0
 --- !u!50 &7156994563905530073
 Rigidbody2D:
   serializedVersion: 4

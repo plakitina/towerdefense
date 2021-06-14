@@ -45,12 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 8160744511507642523, guid: 9632cd8aa1b30bd4fbd68f3598ed04ce,
     type: 3}
+  totalMoneyLabel: {fileID: 0}
+  currentWave: {fileID: 0}
+  totalEscapeLabel: {fileID: 0}
+  playBtnLabel: {fileID: 0}
+  playBtn: {fileID: 0}
   enemies:
-  - {fileID: 775437176867350368, guid: 075159a3b7dab324e807d63277748fca, type: 3}
-  - {fileID: 5762686765035987935, guid: 09498cb80716d434996128dcd1e35bfa, type: 3}
-  - {fileID: 5511174791155165553, guid: 63b099e9790477f4799bfbfb7dc68abf, type: 3}
-  - {fileID: 4114016684497258666, guid: 6664fea92691ad440af946b3788fe87a, type: 3}
-  - {fileID: 4608090529789323458, guid: 546be6146bffc6a4bada1580e3d10aea, type: 3}
+  - {fileID: 775437176867350368, guid: cc86fba42263bcf4da593d1fed7dcc1f, type: 3}
+  - {fileID: 5762686765035987935, guid: bd8056faa1b1bc94cb20f6f768379b2c, type: 3}
+  - {fileID: 5511174791155165553, guid: 6b65db8faf8223c46a06ff3357a2c120, type: 3}
+  - {fileID: 4114016684497258666, guid: 8e81343ec967072418aaa7538bb6b061, type: 3}
+  - {fileID: 4608090529789323458, guid: 665376fa92bd82b4b9a29605c8fe4e01, type: 3}
   maxEnemiesOnScreen: 10
   totalEnemies: 10
   enemiesPerSpawn: 2
+  EnemyList: []

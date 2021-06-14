@@ -45,8 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 4912432725350100317, guid: 91b92b07e1044284a9e1bd1201493f4e,
     type: 3}
+  totalMoneyLabel: {fileID: 0}
+  currentWave: {fileID: 0}
+  totalEscapeLabel: {fileID: 0}
+  playBtnLabel: {fileID: 0}
+  playBtn: {fileID: 0}
   enemies:
-  - {fileID: 775437176867350368, guid: 075159a3b7dab324e807d63277748fca, type: 3}
+  - {fileID: 775437176867350368, guid: 2d562968aaabd454180346a2a0a10842, type: 3}
+  - {fileID: 5762686765035987935, guid: d7ceacc979f79804fb455a9e51d51bb3, type: 3}
+  - {fileID: 5511174791155165553, guid: e9b18241932053e45b7386c261e5b6b4, type: 3}
+  - {fileID: 4114016684497258666, guid: 09e3ec00fa0009b418aefa8ffe644be8, type: 3}
+  - {fileID: 4608090529789323458, guid: da5a6d3b0f08ff74ab4821b31601ccfe, type: 3}
   maxEnemiesOnScreen: 16
   totalEnemies: 30
   enemiesPerSpawn: 2
+  EnemyList: []

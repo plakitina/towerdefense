@@ -156,13 +156,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: 0
-  exit: {fileID: 1069447403691891243, guid: 00aff7caf1683034cbfd8aaac9961fc8, type: 3}
+  exit: {fileID: 1074131381411349130, guid: 59daf7d6a61ef3a4ba99f9f3de03953a, type: 3}
   wayPoints:
-  - {fileID: 1309184286151716280, guid: 2afd094ea59aea745a47c32652a8c90c, type: 3}
-  - {fileID: 947525527393688887, guid: 789e501a9d59eeb48bf2f21e10fa6e1c, type: 3}
-  - {fileID: 3952831786685547836, guid: e520962deeefe124d8de847d070b3254, type: 3}
-  - {fileID: 7195764716220584449, guid: 8f990ca8f0f7c2f4b90e4705bc69e2e9, type: 3}
+  - {fileID: 8960237626777437888, guid: 3644b81d2bbb4244c99462f257617ce8, type: 3}
+  - {fileID: 7371894706270349701, guid: 846c333e98d301a4892456a26d8a8d25, type: 3}
+  - {fileID: 989280654229786079, guid: b6f92986a287ac2449b6c65c6b0c330b, type: 3}
+  - {fileID: 7241231552319935373, guid: 2cd2df6e5692a124f91550168d10364d, type: 3}
+  - {fileID: 8163287692983545904, guid: db6711555e43a4947a9d8b6ba55f213b, type: 3}
+  - {fileID: 7599606139199345891, guid: a19aabb98f17439469a1f4ca0648a0c2, type: 3}
+  - {fileID: 1474302356068803381, guid: 3d94f85bc5b849749b830c5238c5c0a3, type: 3}
+  - {fileID: 7451875336860448197, guid: 924e4f6bf13741e45a8491918feb3835, type: 3}
+  - {fileID: 1451403593150025491, guid: d27fd59d2b49291439bfb69d8b1ee5f1, type: 3}
   navigation: 0.01
+  rewardAmount: 0
+  health: 0
 --- !u!50 &7156994563905530073
 Rigidbody2D:
   serializedVersion: 4

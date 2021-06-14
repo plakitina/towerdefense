@@ -157,8 +157,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: 0
   exit: {fileID: 1069447403691891243, guid: 00aff7caf1683034cbfd8aaac9961fc8, type: 3}
-  wayPoints: []
+  wayPoints:
+  - {fileID: 8408896922319704599, guid: 6226b77de2e4ee84c831a781b2c0da2d, type: 3}
   navigation: 0.01
+  rewardAmount: 0
+  health: 0
 --- !u!50 &7156994563905530073
 Rigidbody2D:
   serializedVersion: 4
